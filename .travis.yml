@@ -3,8 +3,8 @@ services:
   - docker
 
 before-install:
+  - docker images
   - docker build -t singh0009/docker-react:latest -f Dockerfile.dev .
   - docker images
-
-script:
   - docker run  -e CI=true singh0009/docker-react npm run test
+
