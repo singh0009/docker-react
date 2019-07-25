@@ -4,6 +4,7 @@ services:
 
 before-install:
   - echo "Singh@1976" | docker login -u "singh0009" --password-stdin
+  - echo "I am here"
   - docker images
   - docker build -t singh0009/docker-react:latest -f Dockerfile.dev .
  
